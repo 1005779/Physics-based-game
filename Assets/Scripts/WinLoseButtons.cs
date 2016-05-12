@@ -22,4 +22,10 @@ public class WinLoseButtons : MonoBehaviour {
     {
         Application.LoadLevel("Level-1");
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+        Debug.Log("Quit");
+    }
 }
