@@ -18,10 +18,6 @@ public class placeblock : MonoBehaviour {
 	
 	}
 
-    /*if ((Input.GetMouseButtonDown (0) && hit.transform.tag == "TowerPlatform") == true) {
-	  hit.transform.GetComponent<TowerPlatform>().placeTower (towers[towerSelection], towersCost[towerSelection]);
-			}
-		}*/
 
     public void CanPlace( bool place)
     {
