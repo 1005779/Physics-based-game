@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour {
     //public Vector3 ball;
     public Rigidbody rb;
 
-    private float moveSpeed = 10.00f;
+    public float moveSpeed = 20.00f;
     
 
 	// Use this for initialization

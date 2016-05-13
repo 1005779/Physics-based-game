@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameController : MonoBehaviour {
+public class BlockGravity : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        
 	
 	}
 	
@@ -13,5 +12,4 @@ public class GameController : MonoBehaviour {
 	void Update () {
 	
 	}
-   
 }

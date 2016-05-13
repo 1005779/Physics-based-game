@@ -12,11 +12,13 @@ public class UIController : MonoBehaviour {
     private int blocksUsed;
     // Timer
     private float timeLeft;
+    public float ballSpeed;
 
     // Texts for UI
     public Text FinalTime;
     public Text BlocksUsed;
     public Text TimeLeft;
+    public Text BallSpeed;    
 
     //public event system varible
     public EventSystem LevelEventSystem;
@@ -36,6 +38,12 @@ public class UIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        ballSpeed = GameObject.FindGameObjectWithTag("Ball").GetComponent<Ball>().moveSpeed;
+
+        //Call Timer Function
+        Timer();
+
         //Has the user clicked the primary mouse button
         if (Input.GetMouseButtonDown(0))
         {
@@ -80,12 +88,21 @@ public class UIController : MonoBehaviour {
     // Countdown timer - save final thime then load WinLose 
     public void Timer()
     {
+        //count for blocks
+        if (Input.GetMouseButtonDown(0))
+        {
+            blocksUsed = blocksUsed + 1;
+        }
+
+        //Counters
+        finalTime += Time.deltaTime;
         timeLeft -= Time.deltaTime;
 
         //Texts in UI updates
         SetTextCalls();
 
-        if (timeLeft < 0)
+        //Time runn out - end game
+        if (timeLeft <= 0)
         {
             PlayerPrefs.SetFloat("Time: ", finalTime);
             Application.LoadLevel("WinLose");
@@ -99,5 +116,7 @@ public class UIController : MonoBehaviour {
         FinalTime.text = "Time: " + finalTime.ToString();
         BlocksUsed.text = "Blocks Used: " + blocksUsed.ToString();
         TimeLeft.text = "Time Left: " + timeLeft.ToString();
+        BallSpeed.text = "Ball Speed: " + ballSpeed.ToString();
+
     }
 }

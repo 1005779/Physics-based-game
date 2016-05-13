@@ -1,26 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Platform : MonoBehaviour
 {
-
-    public GameObject AnchorPoint;
+    // declaring new objects to tie to script
     public GameObject PrefabToSpawn;
+    public GameObject AnchorPoint;
 
-    // Set the AttachedBuilding as different prefabs IE teleporter, up, down, left, right, and my own ones somehow 
-    //ask Blenderhip Cuecumbercap how he did it
+    // var to check if any blocks are already there
     private GameObject AttachedBuilding = null;
+
+    // Declare Eventsys
+    public EventSystem LevelEventSystem;
 
     // Use this for initialization
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+    }
 
+    public void Swap(GameObject Block)
+    {
+        PrefabToSpawn = Block;
     }
 
     public void ReactToMouseClick()
@@ -42,6 +51,12 @@ public class Platform : MonoBehaviour
             AttachedBuilding.transform.position = AnchorPoint.transform.position;
             AttachedBuilding.transform.SetParent(AnchorPoint.transform);
         }
+    }
+       
 
     }
-}
+
+
+
+
+
