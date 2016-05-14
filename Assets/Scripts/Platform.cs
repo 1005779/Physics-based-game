@@ -8,7 +8,8 @@ public class Platform : MonoBehaviour
     // declaring new objects to tie to script
     public GameObject PrefabToSpawn;
     public GameObject AnchorPoint;
-
+    
+    // Before to make this script is part of the        UI and the buttons it's self
     // var to check if any blocks are already there
     private GameObject AttachedBuilding = null;
 
