@@ -14,11 +14,15 @@ public class UIController : MonoBehaviour {
     private float timeLeft;
     public float ballSpeed;
 
-    // Texts for UI
+    // Texts for UI in level
     public Text FinalTime;
     public Text BlocksUsed;
     public Text TimeLeft;
-    public Text BallSpeed;    
+    public Text BallSpeed; 
+   
+    //Text For UI in WinLose
+    public Text WL;
+    public Text Time;
 
     //public event system varible
     public EventSystem LevelEventSystem;
@@ -104,6 +108,7 @@ public class UIController : MonoBehaviour {
         //Time runn out - end game
         if (timeLeft <= 0)
         {
+            PlayerPrefs.SetInt("Blocks Used: ", blocksUsed);
             PlayerPrefs.SetFloat("Time: ", finalTime);
             Application.LoadLevel("WinLose");
         }
@@ -118,5 +123,18 @@ public class UIController : MonoBehaviour {
         TimeLeft.text = "Time Left: " + timeLeft.ToString();
         BallSpeed.text = "Ball Speed: " + ballSpeed.ToString();
 
+    }
+
+    public void WinLose()
+    {
+        Time.text = "Time: " + PlayerPrefs.GetFloat("Time: ");
+        if (PlayerPrefs.GetFloat("Time: ") > 0)
+        {
+            WL.text = "WIN";
+        }
+        else
+        {
+            WL.text = "LOSE";
+        }
     }
 }

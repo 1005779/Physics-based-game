@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BlockLeft : MonoBehaviour {
+public class BlockLeft : BaseBlock {
 
 	// Use this for initialization
 	void Start () {
@@ -12,4 +12,9 @@ public class BlockLeft : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    public void Left()
+    {
+        transform.rotation = Quaternion.AngleAxis(90, Vector3.left);
+    }
 }

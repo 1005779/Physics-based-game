@@ -28,11 +28,6 @@ public class Platform : MonoBehaviour
         
     }
 
-    public void Swap(GameObject Block)
-    {
-        PrefabToSpawn = Block;
-    }
-
     public void ReactToMouseClick()
     {
         // Is there already a building?
@@ -52,6 +47,13 @@ public class Platform : MonoBehaviour
             AttachedBuilding.transform.position = AnchorPoint.transform.position;
             AttachedBuilding.transform.SetParent(AnchorPoint.transform);
         }
+
+    }
+
+    // Calls fow what block to spawn from the button
+    public void Swap(GameObject Block)
+    {
+        PrefabToSpawn = Block;
     }
        
 

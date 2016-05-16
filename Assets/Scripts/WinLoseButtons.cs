@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class WinLoseButtons : MonoBehaviour {
+
+    public EventSystem LevelEventSystem;
 
 	// Use this for initialization
 	void Start () {

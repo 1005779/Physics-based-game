@@ -15,4 +15,8 @@ public class BaseBlock : MonoBehaviour {
 	
 	}
 
+    public void Test()
+    {
+        
+    }
 }

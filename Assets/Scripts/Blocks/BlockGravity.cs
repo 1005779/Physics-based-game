@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BlockGravity : MonoBehaviour {
+public class BlockGravity : BaseBlock {
+
 
 	// Use this for initialization
 	void Start () {
@@ -12,4 +13,16 @@ public class BlockGravity : MonoBehaviour {
 	void Update () {
 	
 	}
+
+   
+    public void Grav()
+    {
+        
+        float speed = 10.0f;
+        GameObject grav;
+
+        grav = GameObject.FindGameObjectWithTag("BG");
+        float step = speed * Time.deltaTime;
+        transform.position = Vector3.MoveTowards(transform.position, grav.transform.position, step);
+    }
 }

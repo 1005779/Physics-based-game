@@ -48,12 +48,11 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ball.cs" />
      <Compile Include="Assets\Scripts\Blocks\BaseBlock.cs" />
-     <Compile Include="Assets\Scripts\Blocks\BlockDown.cs" />
      <Compile Include="Assets\Scripts\Blocks\BlockGravity.cs" />
      <Compile Include="Assets\Scripts\Blocks\BlockLeft.cs" />
      <Compile Include="Assets\Scripts\Blocks\BlockRight.cs" />
+     <Compile Include="Assets\Scripts\Blocks\BlockSlow.cs" />
      <Compile Include="Assets\Scripts\Blocks\BlockTeleporter.cs" />
-     <Compile Include="Assets\Scripts\Blocks\BlockUp.cs" />
      <Compile Include="Assets\Scripts\CreditsBack.cs" />
      <Compile Include="Assets\Scripts\CreditsRoll.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />

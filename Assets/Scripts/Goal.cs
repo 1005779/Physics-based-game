@@ -18,6 +18,7 @@ public class Goal : MonoBehaviour {
     {
         if (col.gameObject.name == "Ball")
         {
+            Debug.Log("Goal");
             Application.LoadLevel("WinLose");
         }
     }
